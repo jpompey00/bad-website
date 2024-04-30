@@ -63,7 +63,7 @@ function init() {
 function createDropDown() {
     //Creats a new select element and assigns it to newDropdown
     const newDropdown = document.createElement("select");
-    newDropdown.setAttribute("class", "dropdown")
+    newDropdown.setAttribute("class", "dropdown");
 
     //this works, change this
     const currentDiv = document.getElementById("test_div");
