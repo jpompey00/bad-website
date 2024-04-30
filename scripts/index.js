@@ -100,7 +100,7 @@ function createDropDown() {
 
 function dropDownLoop(testDiv = 0) {
 
-    //Creats a new select element and assigns it to newDropdown
+    //Creates a new select element and assigns it to newDropdown
     const newDropdown = document.createElement("select");
     newDropdown.setAttribute("class", "dropdown")
 
