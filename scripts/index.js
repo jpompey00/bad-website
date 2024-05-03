@@ -51,7 +51,7 @@ function init() {
     //ISSUE: createDropDown and dropDownLoop do the same thing but dropDownLoop applies
     //ISSUE: if you change an already changed dropdown, it will create a new dropdown
 
-    //testDiv.onchange = dropDownLoop;
+    
     testDiv.onchange = createDropDown;
 
     submitButton.onclick = submitButtonClicked;
@@ -132,6 +132,7 @@ function dropDownLoop(testDiv = 0) {
         //appends the created options to the Select element
         newDropdown.appendChild(optionMenu);
     }
+
     //appends the select element to the div holding the dropdowns
     testDiv.appendChild(newDropdown);
 }
@@ -144,11 +145,12 @@ function submitButtonClicked(){
     //It would be option elements in this case. Trying to confirm that I have them.
     const textBox = document.createElement("p");
     textBox.setAttribute("style", "display:inline;")
-    // textBox.innerHTML = "test1"
 
     const currentDiv = document.getElementById("test_div");
+    const outputDiv = document.getElementById("output");
     const collection = currentDiv.children;
 
+    //puts the collection to the output. Probably doable without a loop
     let output = "";
     for(let i = 0; i < collection.length; i ++){
         output += collection[i].value;
@@ -159,6 +161,8 @@ function submitButtonClicked(){
 
 
     //ISSUE: when I press submit again, it will print the string again with "output undefined"
+    //SOLVED: Was adding the divs to a paragraph and the collection was reading that. Ps dont have values
     textBox.innerHTML = output;
-    currentDiv.appendChild(textBox)
+    //currentDiv.appendChild(textBox)
+    outputDiv.appendChild(textBox);
 }
