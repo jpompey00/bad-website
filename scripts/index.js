@@ -159,7 +159,6 @@ function submitButtonClicked(){
    console.log(output);
 
 
-
     //ISSUE: when I press submit again, it will print the string again with "output undefined"
     //SOLVED: Was adding the divs to a paragraph and the collection was reading that. Ps dont have values
     textBox.innerHTML = output;
